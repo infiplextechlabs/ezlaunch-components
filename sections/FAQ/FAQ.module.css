@@ -1,0 +1,311 @@
+/* Base Styles */
+.faq {
+  padding: 6rem 0;
+  background: var(--background);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container .title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--primary), var(--foreground));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid Style (Default) */
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.faqItem {
+  padding: 2rem;
+  background: var(--header-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faqItem h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.faqItem p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Accordion Style */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordionItem {
+  background: var(--header-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accordionHeader {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordionHeader h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.accordionIcon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.active .accordionIcon {
+  transform: rotate(45deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--background);
+}
+
+.active .accordionContent {
+  max-height: 200px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.accordionContent p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Cards Style */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  background: var(--header-bg);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), #2563eb);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Minimal Style */
+.minimal {
+  background: var(--header-bg);
+}
+
+.minimalWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.minimalList {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.minimalItem {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.minimalItem:last-child {
+  border-bottom: none;
+}
+
+.minimalItem h3 {
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.minimalItem p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Tabs Style */
+.tabsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  background: var(--header-bg);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.tabsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tabButton {
+  padding: 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.tabButton:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+}
+
+.activeTab {
+  background: var(--primary) !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+.tabContent {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.tabPanel p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .faqGrid,
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabsContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tabsList {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .tabButton {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .accordionHeader h3 {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+} 

@@ -1,0 +1,302 @@
+/* Base Styles */
+.contact {
+  padding: 6rem 0;
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, var(--primary), var(--foreground));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+}
+
+.button {
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(var(--primary-rgb), 0.2);
+}
+
+/* Default Style */
+.default {
+  background: var(--background);
+}
+
+.default .contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.default .container h2 {
+  text-align: center;
+}
+
+/* Split Style */
+.split {
+  background: var(--header-bg);
+}
+
+.split .splitContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.infoSection {
+  padding-right: 2rem;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoLabel {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.infoValue {
+  color: var(--muted);
+}
+
+/* Modern Style */
+.modern {
+  background: var(--header-bg);
+}
+
+.modernWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.modernHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.modernForm {
+  background: var(--background);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modernButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.buttonIcon {
+  transition: transform 0.2s ease;
+}
+
+.modernButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+/* Minimal Style */
+.minimal {
+  background: var(--background);
+}
+
+.minimalWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.minimalForm {
+  margin-top: 3rem;
+}
+
+.formField {
+  margin-bottom: 2rem;
+}
+
+.formField label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.minimalForm input,
+.minimalForm textarea {
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--border);
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.minimalForm input:focus,
+.minimalForm textarea:focus {
+  border-color: var(--primary);
+  box-shadow: none;
+}
+
+/* Card Style */
+.card {
+  background: var(--background);
+}
+
+.cardWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cardContent {
+  background: var(--header-bg);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.cardDecoration {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: -2rem;
+  bottom: -2rem;
+  background: linear-gradient(45deg, rgba(var(--primary-rgb), 0.1), transparent);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.cardForm input,
+.cardForm textarea {
+  background: var(--background);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .split .splitContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .infoSection {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .modernForm {
+    padding: 2rem;
+  }
+
+  .inputGroup {
+    grid-template-columns: 1fr;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .cardContent {
+    padding: 2rem;
+  }
+
+  .cardDecoration {
+    display: none;
+  }
+} 

@@ -1,0 +1,93 @@
+.header {
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+.logo::after {
+  content: 'beta';
+  position: absolute;
+  top: -8px;
+  right: -28px;
+  font-size: 0.75rem;
+  background: var(--primary);
+  color: var(--background);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .nav {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .logo::after {
+    right: -24px;
+    font-size: 0.7rem;
+  }
+} 

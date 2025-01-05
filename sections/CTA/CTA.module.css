@@ -1,0 +1,305 @@
+/* Base Styles */
+.cta {
+  padding: 6rem 0;
+  background: var(--header-bg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, var(--primary), var(--foreground));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(var(--primary-rgb), 0.2);
+}
+
+.buttonOutline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Split Style */
+.split {
+  background: var(--background);
+  text-align: left;
+}
+
+.splitContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.imageSection {
+  position: relative;
+  height: 400px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(var(--primary-rgb), 0.1), rgba(var(--primary-rgb), 0.05));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* Minimal Style */
+.minimal {
+  background: var(--background);
+}
+
+.minimalWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.minimal h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.minimal .button {
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 12px;
+}
+
+/* Gradient Style */
+.gradient {
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color: white;
+  padding: 8rem 0;
+}
+
+.gradientWrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gradientContent {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  background: none;
+  -webkit-text-fill-color: white;
+}
+
+.gradient p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.buttonLight {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.buttonLight:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.gradientOverlay {
+  position: absolute;
+  top: -100%;
+  left: -50%;
+  right: -50%;
+  bottom: -100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Modern Style */
+.modern {
+  background: var(--background);
+}
+
+.modernWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem;
+  background: var(--header-bg);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.modernContent {
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modern h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.ctaGroup {
+  margin-top: 3rem;
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.guaranteeIcon {
+  width: 20px;
+  height: 20px;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .splitContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .imageSection {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1.125rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .gradient h2 {
+    font-size: 2.5rem;
+  }
+
+  .gradient p {
+    font-size: 1.25rem;
+  }
+
+  .modernWrapper {
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+  }
+
+  .modern h2 {
+    font-size: 2rem;
+  }
+} 
