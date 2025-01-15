@@ -1,39 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+}
+
 .container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
-}
-
-.project {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
-}
-
-.project:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.project h3 {
-    color: #111827;
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem 0;
-}
-
-.project p {
-    color: #6b7280;
-    font-size: 0.875rem;
-    margin: 0 0 1rem 0;
-}
-
-.meta {
-    font-size: 0.75rem;
-    color: #9ca3af;
 }
 
 .empty {
@@ -43,4 +22,42 @@
     background: #f9fafb;
     border-radius: 0.5rem;
     margin: 1rem;
+}
+
+.viewSwitcher {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 1rem;
+    justify-content: flex-end;
+
+}
+
+.switchButton {
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.switchButton:hover {
+    color: #374151;
+    background: #f3f4f6;
+}
+
+.switchButton.active {
+    color: #f26625;
+    background: #fff1e7;
+}
+
+.switchButton i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
 }

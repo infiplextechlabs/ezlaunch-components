@@ -1,0 +1,127 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th {
+    background: #f9fafb;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.empty {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.button {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    min-width: 36px;
+}
+
+.button i {
+    font-size: 1rem;
+}
+
+.button span {
+    position: absolute;
+    background: #1f2937;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.button span::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px;
+    border-style: solid;
+    border-color: #1f2937 transparent transparent transparent;
+}
+
+.button:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.previewButton {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}
+
+.previewButton:hover {
+    background-color: #e5e7eb;
+}
+
+.deployButton {
+    background-color: #f26625;
+    color: white;
+}
+
+.deployButton:hover {
+    background-color: #e55511;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button:disabled:hover span {
+    opacity: 0;
+    visibility: hidden;
+}

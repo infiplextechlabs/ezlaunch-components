@@ -18,9 +18,17 @@ const sectionIdToTitle = {
 };
 
 const Header = ({ projectName, selectedSections }) => {
-  const sectionsToShow = selectedSections.filter((section) =>
-    sectionsToShowInHeader.includes(section)
-  );
+  // const sectionsToShow = selectedSections.filter((section) =>
+  //   sectionsToShowInHeader.includes(section)
+  // );
+  const sectionsToShow = [
+    "hero",
+    "features",
+    "howitworks",
+    "testimonials",
+    "pricing",
+    "contact",
+  ];
 
   return (
     <header className={styles.header}>
